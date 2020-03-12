@@ -1,0 +1,900 @@
+@font-face {
+    font-family: 'Clear Sans';
+    src: local('Clear Sans'), local('ClearSans'), url('clearsans/clearsans.woff2') format('woff2'), url('/clearsans/clearsans.woff') format('woff'), url('clearsans/clearsans.ttf') format('truetype');
+}
+body {
+    font-family: 'Clear Sans';
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    cursor: pointer;
+}
+/*header*/
+.img-logo {
+    width: 183px;
+    height: 55px;
+}
+.middle {
+    width: 825px;
+    margin: 0 auto;
+}
+.info {
+    display: flex;
+    flex-direction: row;
+    padding-top: 11px;
+    padding-bottom: 4px;
+}
+.work-time {
+    text-align: center;
+    color: #3A4047;
+    width: 30%;
+    margin-left: 52px;
+    padding-top: 1px;
+}
+.work-time p {
+    font-size: 11px;
+    line-height: 15px;
+    word-spacing: 3px;
+}
+.work-time span {
+    font-size: 10px;
+    line-height: 13px;
+    font-weight: bold;
+}
+.contacts {
+    width: 32%;
+    margin-left: 24px;
+    padding-top: 6px;
+}
+.login-email {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 10px;
+    width: 100%;
+    text-decoration: underline;
+}
+.personal-account {
+    display: flex;
+    flex-direction: row;
+    margin-left: 17px;
+    margin-top: 1px;
+}
+.login-icon {
+    width: 12px;
+    height: 12px;
+    margin-top: 2px;
+}
+.personal-account-link {
+    text-align: justify;
+    margin-left: 4px;
+    color: black;
+}
+.email {
+    margin-left: 46px;
+    color: black;
+}
+.personal-account-link:hover, .email:hover {
+    color: skyblue;
+}
+.phone {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.phone-margin {
+    margin-top: 12px;
+    margin-right: 5px;
+}
+.img-fb {
+    width: 9px;
+    height: 16px;
+    margin-right: 13px;
+}
+.img-cart {
+    width: 33px;
+    height: 33px;
+    margin-top: 13px;
+    margin-left: 8px;
+}
+/*pop up with phones*/
+.phone-link {
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: -20px;
+    vertical-align: top;
+}
+.phone-form {
+    position: relative;
+}
+.select-phone-item:focus, .select-phone-item:hover, .select-phone-item:active {
+    outline: 0 none!important;
+}
+.select-phone {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #e6e6e6;
+    right: -8px;
+    top: 30px;
+    padding: 13px 18px;
+    width: 115px;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: 1s;
+    visibility: hidden;
+}
+.select-phone:before {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 8px 8px 8px;
+    border-color: transparent transparent white transparent;
+    position: absolute;
+    top: -8px;
+    left: 130px;
+    content: '';
+    display: block;
+}
+.select-phone-item{
+    display: block;
+    font-size: 11px;
+    vertical-align: top;
+    color: black;
+}
+.img-phone {
+    width: 15px;
+    height: 16px;
+    margin-right: 5px;
+}
+.select-icon {
+    width: 14px;
+    height: 14px;
+    vertical-align: text-top;
+}
+.clear {
+    clear: both;
+    height: 0;
+    overflow: hidden;
+}
+/*end pop up with phones*/
+#hider {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+#hider:checked + .select-phone {
+    opacity: 1;
+    transition: 1s;
+    cursor: pointer;
+    visibility: visible;
+}
+.mobile-menu {
+    display: none;
+}
+.menu {
+    border-top: 1px solid gainsboro;
+}
+nav {
+    font-size: 10px;
+}
+li {
+    list-style: none;
+}
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow: hidden; zoom: 1;
+}
+nav ul li {
+    padding: 12px 0;
+}
+.link {
+    border-right: 1px solid gainsboro;
+    width: 10%;
+    padding: 0 26px;
+}
+nav ul li:last-child {
+    padding-left: 25px;
+}
+nav ul li:hover {
+    color: skyblue;
+    border-top: 1px solid skyblue;
+    cursor: pointer;
+}
+nav ul li:last-child:hover {
+    border-top: none;
+    cursor: default;
+}
+#search {
+    background: url(img/search.png) no-repeat left;
+    background-size: contain;
+    border: white solid 1px;
+    width: 50px;
+}
+#search:focus {
+    background: white;
+    border:  skyblue solid 1px;
+}
+/*header end*/
+/*main*/
+.block-img {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(img/back_.jpg) no-repeat;
+    background-size: cover;
+}
+.wrap {
+    color: white;
+    text-align: center;
+    padding-top: 105px;
+    padding-bottom: 100px;
+}
+.wrap-title {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0 auto;
+}
+.wrap hr {
+    width: 80px;
+    height: 2px;
+    background-color: white;
+    margin: 6px auto;
+    border: 0;
+}
+.wrap-description {
+    font-size: 17px;
+    margin-top: 11px;
+}
+.make-order {
+    background-color: #1AB0CE;
+    margin-top: 16px;
+    padding: 8px 28px;
+    border:  1px solid #1AB0CE;
+    color: white;
+    font-size: 12px;
+    transition: 1s;
+}
+.make-order:hover {
+    border:  1px solid;
+    transition: 1s;
+}
+.product, .about-us, .news {
+    text-align: center;
+}
+.title-section {
+    font-size: 25px;
+    margin-top: 22px;
+}
+.cards-wrap {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+.card {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid gainsboro;
+    width: 26.5%;
+    padding: 1.8% 2.5% 1%;
+}
+.card-icon {
+    height: 44px;
+}
+.description {
+    width: 71%;
+    text-align: left;
+}
+.list {
+    font-size: x-small;
+    margin-top: 14px;
+}
+.card:nth-child(2) .list {
+    columns: 2;
+}
+.list ul li {
+    list-style: none;
+    margin-bottom: 11px;
+}
+.about-us {
+    border-bottom: 1px solid gainsboro;
+    padding-bottom: 30px;
+}
+.about-us-sec-title {
+    margin-top: 8px;
+    font-size: 16px;
+}
+.about-us-text {
+    margin-top: 22px;
+    font-size: 0.62em;
+    line-height: 13px;
+    text-align: justify;
+}
+.column {
+    width: 29%;
+    padding: 28px 2.5%;
+    text-align: center;
+    border-top: 1px solid white;
+}
+.date {
+    font-size: 10px;
+    color: gainsboro;
+    margin-bottom: 9px;
+}
+.column-text {
+    font-size: 11px;
+}
+.column-text:hover {
+    text-decoration: underline;
+}
+.column:hover {
+    border-top: 1px solid skyblue;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+    color: skyblue;
+    cursor: pointer;
+}
+.btn {
+    text-align: center;
+}
+.btn-news {
+    border: 1px solid #1AB0CE;
+    padding: 5px 14px;
+    color: #1AB0CE;
+    background-color: white;
+    margin: 38px 0 34px;
+    font-size: 10px;
+    transition: 1s;
+}
+.btn-news:hover {
+    background-color: #1AB0CE;
+    color: white;
+    transition: 1s;
+}
+.list-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 6px 0;
+}
+.list-item:hover {
+    background-color: #eee9e9;
+}
+.phone-icon {
+    width: 18px;
+    height: 18px;
+    vertical-align: bottom;
+    margin-right: 4px;
+}
+.call-me {
+    position: absolute;
+    z-index: 6;
+    height: 95px;
+    width: 95px;
+    top: 420px;
+    right: 156px;
+    transition: 0.25s;
+}
+.call-me:hover, .main-callme:hover {
+    height: 98px;
+    width: 98px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+.main-callme {
+    position: absolute;
+    z-index: 5;
+    height: 95px;
+    width: 95px;
+    top: 1199px;
+    right: 162px;
+}
+/*main end*/
+footer {
+    background-color: #F4F4F4;
+    font-size: 10px;
+    border-top: 1px solid #e6e6e6;
+}
+.footer-columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.footer-logo {
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 13px 0 16px;
+}
+.rights {
+    margin-top: 9px;
+}
+.footer-column {
+    width: 23%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.footer-menu {
+    width: 23%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.menu-column {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 19px 0 18px;
+}
+.menu-column a {
+    color: black;
+}
+.footer-work-time {
+    margin: 19px 0 16px;
+}
+.footer-work {
+    line-height: 14px;
+}
+.glyanets {
+    font-size: 8px;
+    text-transform: uppercase;
+}
+.glyanets-img {
+    height: 12px;
+    width: 12px;
+    vertical-align: middle;
+}
+.footer-info {
+    text-align: right;
+    margin: 18px 0 11px;
+}
+.footer-info a {
+    color: black;
+}
+.footer-phone-icon {
+    width: 13px;
+    height: 13px;
+    vertical-align: top;
+}
+footer a:hover {
+     text-decoration: underline;
+}
+.mobile-call-me {
+    display: none;
+}
+
+@media screen and (max-width: 1324px){
+    .middle {
+        width: 62%;
+        margin: 0 19%;
+    }
+    .img-logo {
+        width: 159px;
+        height: 50px;
+    }
+    .work-time {
+        width: 32%;
+        margin-left: 5px;
+    }
+    .contacts {
+        margin-left: 15px;
+    }
+    .work-time p {
+        font-size: 9px;
+        line-height: 13px;
+    }
+    .work-time span {
+        font-size: 8px;
+        line-height: 11px;
+    }
+    .login-email {
+        font-size: 9px;
+    }
+    .personal-account {
+        margin-left: 0;
+    }
+    .email {
+        margin-left: 5px;
+    }
+    .phone-margin {
+        margin-top: 12px;
+        margin-right: 0;
+    }
+    nav {
+        font-size: 9px;
+    }
+    .link {
+        padding: 0 27px;
+    }
+    nav ul li:last-child {
+        padding-left: 26px;
+    }
+    .wrap {
+        padding-top: 75px;
+        padding-bottom: 70px;
+    }
+    .wrap-title {
+        font-size: 32px;
+    }
+    .wrap-description {
+        font-size: 14px;
+    }
+    .make-order {
+        padding: 9px 27px;
+        font-size: 11px;
+    }
+    .call-me {
+        top: 335px;
+        right: 80px;
+    }
+    .column {
+        padding: 25px 2.5%;
+    }
+    .main-callme {
+        top: 1115px;
+        right: 80px;
+    }
+    .footer-work-time {
+        font-size: 9px;
+    }
+    .footer-work {
+        line-height: 11px;
+    }
+    .footer-column {
+        width: 24%;
+    }
+}
+@media screen and (max-width: 1250px) {
+    .link {
+        padding: 0 23px;
+    }
+    nav ul li:last-child {
+        padding-left: 22px;
+    }
+}
+@media screen and (max-width: 1155px) {
+    .link {
+        padding: 0 20px;
+    }
+    nav ul li:last-child {
+        padding-left: 19px;
+    }
+}
+@media screen and (max-width: 1080px) {
+    .link {
+        padding: 0 17px;
+    }
+    nav ul li:last-child {
+        padding-left: 16px;
+    }
+}
+@media screen and (max-width: 1040px){
+    .middle {
+        width: 92%;
+        margin: 0 auto;
+    }
+    .img-logo {
+        width: 159px;
+        height: 50px;
+    }
+    .work-time {
+        width: 32%;
+        margin-left: 5px;
+    }
+    .work-time p {
+        font-size: 10px;
+        line-height: 13px;
+    }
+    .work-time span {
+        font-size: 10px;
+        line-height: 11px;
+    }
+    .info {
+        justify-content: space-between;
+    }
+    .select-phone {
+        display: none;
+    }
+    .contacts {
+        width: 23%;
+        margin-left: 15px;
+        padding-top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .email {
+        display: none;
+    }
+    .login-email {
+        font-size: 9px;
+        justify-content: flex-end;
+    }
+    .personal-account {
+        margin-left: 0;
+        font-size: 12px;
+    }
+    .login-icon {
+        width: 14px;
+        height: 14px;
+    }
+    .phone {
+        justify-content: flex-end;
+    }
+    .phone-margin {
+        margin-top: 8px;
+        margin-right: 0;
+    }
+    .img-cart {
+        margin-top: 8px;
+    }
+    .mobile-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .menu {
+        display: none;
+    }
+    .mobile-menu {
+        display: block;
+        font-size: 32px;
+        margin-top: 3px;
+        margin-left: 15px;
+    }
+    .wrap {
+        padding-top: 75px;
+        padding-bottom: 70px;
+    }
+    .wrap-title {
+        font-size: 32px;
+    }
+    .wrap-description {
+        font-size: 14px;
+    }
+    .make-order {
+        padding: 9px 27px;
+        font-size: 13px;
+    }
+    .about-us-text {
+        font-size: 11px;
+    }
+    .call-me {
+        top: 300px;
+        right: 80px;
+    }
+    .date {
+        font-size: 12px;
+    }
+    .column {
+        padding: 22px 2.5%;
+    }
+    .btn-news {
+        padding: 7px 15px;
+        margin: 30px 0 32px;
+        font-size: 12px;
+    }
+    .main-callme {
+        display: none;
+    }
+    footer {
+        font-size: 13px;
+    }
+    .footer-work-time {
+        display: none;
+    }
+    .footer-column {
+        width: 27%;
+    }
+    .footer-menu {
+        width: 37%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .menu-column {
+        width: 45%;
+    }
+    .glyanets {
+        font-size: 11px;
+    }
+    .glyanets-img {
+        vertical-align: text-top;
+    }
+}
+@media screen and (max-width: 767px) {
+    .middle {
+        width: 92%;
+        margin: 0 auto;
+    }
+    .info {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .logo {
+        display: flex;
+        justify-content: center;
+    }
+    .img-logo {
+        width: 60%;
+        height: 20%;
+    }
+    .work-time {
+        display: none;
+    }
+    .select-phone {
+        display: none;
+    }
+    .contacts {
+        width: 100%;
+        margin-left: 0;
+        padding-top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .email {
+        display: block;
+        margin-left: 5px;
+        font-size: 15px;
+    }
+    .login-email {
+        justify-content: space-between;
+    }
+    .personal-account {
+        margin-left: 0;
+        margin-top: 0;
+        font-size: 15px;
+    }
+    .login-icon {
+        width: 16px;
+        height: 16px;
+    }
+    .phone {
+        justify-content: center;
+    }
+    .phone-margin {
+        margin-top: 8px;
+        margin-right: 0;
+    }
+    .img-fb {
+        width: 15px;
+        height: 22px;
+        margin-right: 13px;
+    }
+    .img-phone {
+        width: 21px;
+        height: 22px;
+        margin-right: 5px;
+    }
+    .phone-link {
+        font-size: 15px;
+    }
+    .select-icon {
+        width: 17px;
+        height: 17px;
+        vertical-align: text-top;
+    }
+    .mobile-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .img-cart {
+        width: 40px;
+        height: 40px;
+        margin-left: 8px;
+        margin-top: 8px;
+    }
+    .menu {
+        display: none;
+    }
+    .mobile-menu {
+        display: block;
+        font-size: 40px;
+        margin-top: 3px;
+    }
+    .wrap {
+        padding: 50px 0;
+    }
+    .wrap-title {
+        font-size: 32px;
+    }
+    .wrap-description {
+        font-size: 14px;
+    }
+    .make-order {
+        padding: 9px 27px;
+        font-size: 13px;
+    }
+    .cards-wrap {
+        flex-direction: column;
+    }
+    .card {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto 10px;
+        width: 60%;
+        padding: 3% 2.5%;
+    }
+    .card:nth-child(2) .list {
+        columns: 1;
+    }
+    h6 {
+        font-size: small;
+    }
+    .card-icon {
+        height: 55px;
+    }
+    .list {
+        font-size: small;
+    }
+    .about-us-text {
+        font-size: 11px;
+    }
+    .call-me {
+        display: none;
+    }
+    .mobile-call-me {
+        z-index: 101;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        height: 90px;
+        width: 90px;
+        margin-bottom: 10px;
+        display: block;
+    }
+    .mobile-call-me:hover {
+        height: 93px;
+        width: 93px;
+        transition: 0.25s;
+        cursor: pointer;
+    }
+    .column {
+        width: 80%;
+        padding: 22px 10%;
+    }
+    .date {
+        font-size: 14px;
+    }
+    .column-text {
+        font-size: 13px;
+    }
+    .btn-news {
+        padding: 8px 16px;
+        margin: 30px 0 32px;
+        font-size: 12px;
+    }
+    .main-callme {
+        display: none;
+    }
+    footer {
+        font-size: 13px;
+    }
+    .footer-work-time, .footer-menu, .footer-info .phone, .footer-info a {
+        display: none;
+    }
+    .footer-columns {
+        flex-direction: column;
+    }
+    .footer-column {
+        width: 100%;
+    }
+    .footer-info {
+        margin: 0;
+    }
+    .glyanets {
+        font-size: 11px;
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 15px;
+    }
+    .glyanets-img {
+        vertical-align: text-top;
+    }
+}
